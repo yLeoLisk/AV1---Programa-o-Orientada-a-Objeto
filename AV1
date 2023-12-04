@@ -1,0 +1,60 @@
+class Canal:
+    def enviar_mensagem(self, mensagem):
+        pass
+
+class WhatsApp(Canal):
+    def _init_(self, numero):
+        self.numero = numero
+
+    def enviar_mensagem(self, mensagem):
+        # Lógica para enviar mensagem via WhatsApp
+        print(f"Enviando mensagem para {self.numero} via WhatsApp: {mensagem}")
+
+class Telegram(Canal):
+    def _init_(self, usuario):
+        self.usuario = usuario
+
+    def enviar_mensagem(self, mensagem):
+        # Lógica para enviar mensagem via Telegram
+        print(f"Enviando mensagem para {self.usuario} via Telegram: {mensagem}")
+
+class Facebook(Canal):
+    def _init_(self, usuario):
+        self.usuario = usuario
+
+    def enviar_mensagem(self, mensagem):
+        # Lógica para enviar mensagem via Facebook
+        print(f"Enviando mensagem para {self.usuario} via Facebook: {mensagem}")
+
+class Instagram(Canal):
+    def _init_(self, usuario):
+        self.usuario = usuario
+
+    def enviar_mensagem(self, mensagem):
+        # Lógica para enviar mensagem via Instagram
+        print(f"Enviando mensagem para {self.usuario} via Instagram: {mensagem}")
+
+
+class MensagemTexto:
+    def _init_(self, texto, data_envio):
+        self.texto = texto
+        self.data_envio = data_envio
+
+class MensagemVideo:
+    def _init_(self, texto, arquivo, formato, duracao):
+        self.texto = texto
+        self.arquivo = arquivo
+        self.formato = formato
+        self.duracao = duracao
+
+class MensagemFoto:
+    def _init_(self, texto, arquivo, formato):
+        self.texto = texto
+        self.arquivo = arquivo
+        self.formato = formato
+
+class MensagemArquivo:
+    def _init_(self, texto, arquivo, formato):
+        self.texto = texto
+        self.arquivo = arquivo
+        self.formato = formato
